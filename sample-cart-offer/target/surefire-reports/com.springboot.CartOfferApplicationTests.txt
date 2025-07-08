@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.springboot.CartOfferApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.17 s <<< FAILURE! - in com.springboot.CartOfferApplicationTests
+checkFlatXForOneSegment(com.springboot.CartOfferApplicationTests)  Time elapsed: 2.749 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at com.springboot.CartOfferApplicationTests.addOffer(CartOfferApplicationTests.java:45)
+	at com.springboot.CartOfferApplicationTests.checkFlatXForOneSegment(CartOfferApplicationTests.java:31)
+
