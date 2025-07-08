@@ -36,6 +36,22 @@ public class CartOfferApplicationTests {
 		boolean result = addOffer(offerRequest);
 		Assert.assertEquals(result,true); // able to add offer
 	}
+	@Test
+	public void checkFlatXPercent() throws Exception {
+		List<String> segments = new ArrayList<>();
+		segments.add("p2");
+		OfferRequest offerRequest = new OfferRequest(1,"FLATPERCENT",10,segments);
+		boolean result = addOffer(offerRequest);
+		Assert.assertEquals(result,true);
+	}
+	@Test
+	public void checkFlatXPercentInvalidOfferType() throws Exception {
+		List<String> segments = new ArrayList<>();
+		segments.add("p2");
+		OfferRequest offerRequest = new OfferRequest(1,"abc",10,segments);
+		boolean result = addOffer(offerRequest);
+		Assert.assertEquals(result,true);
+	}
 
 	public boolean addOffer(OfferRequest offerRequest) throws Exception {
 		String urlString = "http://localhost:" + port + "/api/v1/offer";
